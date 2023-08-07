@@ -24,8 +24,8 @@ import { BsArrowRightSquareFill } from "react-icons/bs";
   console.log(currentSlide)
   return (
     <div class="overflow-x-hidden w-full ">
-        <div class=' w-screen h-[650px] relative '>
-          <div class='w-[400vw] flex  transition-transform duration-100'
+        <div class=' w-screen  relative '>
+          <div class='w-[400vw] flex  transition-transform duration-1000'
                 style={{ transform: `translateX(-${currentSlide * 100 }vw) `  }}
           >
             <img class=' w-screen h-96 object-cover' src={SlideData[0] } />
@@ -33,12 +33,12 @@ import { BsArrowRightSquareFill } from "react-icons/bs";
             <img class=' w-screen h-96  object-cover' src={SlideData[2] } />
             <img class=' w-screen h-96  object-cover' src={SlideData[3] } />
           </div>
-          <div class=' flex gap-8 absolute w-fit left-0 right-0 mx-auto bottom-8'>
-            <div onClick={PrevSlide} class=' '>
-                <BsArrowLeftSquareFill class=' w-14 h-16' />
+          <div class=' justify-around flex gap-8 absolute w-fit left-0 right-0 mx-auto bottom-72'>
+            <div  class=' '>
+                <BsArrowLeftSquareFill onClick={PrevSlide} class='  w-10 h-16 ' />
             </div>
-            <div onClick={NextSlide}>
-                <BsArrowRightSquareFill class=' w-14 h-16' />
+            <div >
+                <BsArrowRightSquareFill onClick={NextSlide} class=' w-10 h-16' />
             </div>
           </div>
         </div>
